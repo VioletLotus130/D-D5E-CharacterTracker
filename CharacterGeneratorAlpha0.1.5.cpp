@@ -1,15 +1,25 @@
 #include <iostream>
-#include <windows.h>
 #include <cmath>
 #include <string>
 #include <ctime>
 #include <cstdlib>
+#include <fstream>
+
 using namespace std;
 
+int ModifiedAttribute();
+int ModifiedAttribute(int AttributeToBeModified)
+{
+    switch(AttributeToBeModified)
+    {
+        case 1 :
+        int AttributeModifier = -5;
+        return AttributeModifier;
+        break;
+    }
+}
 int main()
 {
-    system("color f0");
-
     string playerName, characterName, sex, race, alignment1, alignment2, Class, languagePrimary;
     int age, currentLevel, EXP,
     attributeStr, attributeDex, attributeCon, attributeInt, attributeWis, attributeCha,
@@ -30,8 +40,45 @@ int main()
     cin>>sex;
     cout<<"\n  Currently available Races: ";
     cout<<"\n 1.  Aasimar\n 2.  Teifling\n 3.  Elf\n 4.  Human\n 5.  Half-Elf\n 6.  Halfling\n 7.  Dwarf\n 8.  Half-Orc\n 9.  Lizardfolk\n 10. Goblin\n 11. Gnome";
-    cout<<"\n  Enter your character's race: ";
-    cin>>race;
+    cout<<"\n  Enter the number of your character's race: ";
+    int raceChoice;
+    cin>>raceChoice;
+    switch (raceChoice)
+    {
+        case 1:
+            race = "Aasimar";
+            break;
+        case 2:
+            race = "Teifling";
+            break;
+        case 3:
+            race = "Elf";
+            break;
+        case 4:
+            race = "Human";
+            break;
+        case 5:
+            race = "Half-Elf";
+            break;
+        case 6:
+            race = "Halfling";
+            break;
+        case 7:
+            race = "Dwarf";
+            break;
+        case 8:
+            race = "Half-Orc";
+            break;
+        case 9:
+            race = "Lizardfolk";
+            break;
+        case 10:
+            race = "Goblin";
+            break;
+        case 11:
+            race = "Gnome";
+            break;
+    }
     cout<<"\n  Enter your character's first alignment.";
     cout<<"\n  Lawful, Neutral, or Chaotic: ";
     cin>>alignment1;
@@ -40,12 +87,83 @@ int main()
     cin>>alignment2;
     cout<<"\n  Currently available Classes: ";
     cout<<"\n 1.  Barbarian\n 2.  Bard\n 3.  Cleric\n 4.  Druid\n 5.  Fighter\n 6.  Monk\n 7.  Paladin\n 8.  Ranger\n 9.  Rogue\n 10. Sorcerer\n 11. Warlock\n 12. Wizard";
-    cout<<"\n  Enter your character's class: ";
-    cin>>Class;
+    cout<<"\n  Enter the number of your character's class: ";
+
+    int ClassChoice;
+    cin>>ClassChoice;
+
+    switch (ClassChoice)
+    {
+        case 1 :
+            Class = "Barbarian";
+            break;
+        case 2 :
+            Class = "Bard";
+            break;
+        case 3 :
+            Class = "Cleric";
+            break;
+        case 4 :
+            Class = "Druid";
+            break;
+        case 5 :
+            Class = "Fighter";
+            break;
+        case 6 :
+            Class = "Monk";
+            break;
+        case 7 :
+            Class = "Paladin";
+            break;
+        case 8 :
+            Class = "Ranger";
+            break;
+        case 9 :
+            Class = "Rogue";
+            break;
+        case 10 :
+            Class = "Sorcerer";
+            break;
+        case 11 :
+            Class = "Warlock";
+            break;
+        case 12 :
+            Class = "Wizard";
+            break;
+    }
+    int languageChoice;
     cout<<"\n  Currently available Languages: ";
     cout<<"\n 1. Common\n 2. Dwarvish\n 3. Elvish\n 4. Giant\n 5. Gnomish\n 6. Goblin\n 7. Halfling\n 8. Orcish";
     cout<<"\n  Enter your character's first language: ";
-    cin>>languagePrimary;
+    cin>>languageChoice;
+    //languagePrimary
+    switch (languageChoice)
+    {
+        case 1 :
+        languagePrimary = "Common";
+        break;
+        case 2 :
+        languagePrimary = "Dwarvish";
+        break;
+        case 3 :
+        languagePrimary = "Elvish";
+        break;
+        case 4 :
+        languagePrimary = "Giant";
+        break;
+        case 5 :
+        languagePrimary = "Gnomish";
+        break;
+        case 6 :
+        languagePrimary = "Goblin";
+        break;
+        case 7 :
+        languagePrimary = "Halfling";
+        break;
+        case 8 :
+        languagePrimary = "Orcish";
+    }
+
     cout<<"\n  Enter your character's age: ";
     cin>>age;
     while (!cin)
@@ -577,21 +695,31 @@ int main()
             cin>>attributeCha;
         }
     }
-    cout<<"\n  Player Name:    "<<playerName;
-    cout<<"\n\n   Your Character Outline:\n\n";
-    cout<<"\n  Name:           "<<characterName;
-    cout<<"\n  Sex:            "<<sex;
-    cout<<"\n  Race:           "<<race;
-    cout<<"\n  Alignment:      "<<alignment1<<" "<<alignment2;
-    cout<<"\n  Class:          "<<Class;
-    cout<<"\n  Age:            "<<age;
-    cout<<"\n    Attributes:"<<endl;
-    cout<<"  Strength:         "<<attributeStr<<endl;
-    cout<<"  Dexterity:        "<<attributeDex<<endl;
-    cout<<"  Constitution:     "<<attributeCon<<endl;
-    cout<<"  Intelligence:     "<<attributeInt<<endl;
-    cout<<"  Wisdom:           "<<attributeWis<<endl;
-    cout<<"  Charisma:         "<<attributeCha<<endl;
+    // Attribute modifier
+    /* 1 == -5, 2-3 == -4, 4-5 ==-3, 6-7 == -2, 8-9 == -1, 10-11 == 0, 12-13 == 1, 14-15 == 2, 16-17 == 3, 18-19 == 4, 20-21 == 5,
+    22-23 == 6, 24-25 == 7, 26-27 == 8, 28-29 == 9, 30 ==10*/
+    int modifierStr, modifierDex, modifierCon, modifierInt, modifierWis, modifierCha;
+    int ModifiedAttr;
+
+    ofstream CharGenOutput;
+    CharGenOutput.open("CharacterNameTOOLAAATE.txt");
+    CharGenOutput<<"\n  Player Name:    "<<playerName;
+    CharGenOutput<<"\n\n   Your Character Outline:\n\n";
+    CharGenOutput<<"\n  Name:           "<<characterName;
+    CharGenOutput<<"\n  Sex:            "<<sex;
+    CharGenOutput<<"\n  Race:           "<<race;
+    CharGenOutput<<"\n  Alignment:      "<<alignment1<<" "<<alignment2;
+    CharGenOutput<<"\n  Class:          "<<Class;
+    CharGenOutput<<"\n  Age:            "<<age;
+    CharGenOutput<<"\n    Attributes:"<<endl;
+    CharGenOutput<<"  Strength:         "<<attributeStr<<endl;
+    CharGenOutput<<"  Dexterity:        "<<attributeDex<<endl;
+    CharGenOutput<<"  Constitution:     "<<attributeCon<<endl;
+    CharGenOutput<<"  Intelligence:     "<<attributeInt<<endl;
+    CharGenOutput<<"  Wisdom:           "<<attributeWis<<endl;
+    CharGenOutput<<"  Charisma:         "<<attributeCha<<endl;
+
+
     cout<<"\n\n  Enter anything to close the program: ";
     string GTFO;
     cin>>GTFO;

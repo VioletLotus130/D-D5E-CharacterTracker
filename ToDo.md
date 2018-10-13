@@ -13,7 +13,9 @@ Race  WIP !! Make preset settings for Attribute bonuses for these races
         8.  Half-Orc
         9.  Lizardfolk
         10. Goblin
-        11. Gnome              
+        11. Gnome    
+        12. Custom
+                  
 Alignment  DONE
 Class WIP !! Make preset settings for Attribute bonuses for these classes
     Defaults
@@ -29,6 +31,7 @@ Class WIP !! Make preset settings for Attribute bonuses for these classes
         10. Sorcerer
         11. Warlock
         12. Wizard
+        13. Custom !!
 
 Languages WIP !! Take all languages
     Defaults        
@@ -40,5 +43,13 @@ Languages WIP !! Take all languages
         6. Goblin  
         7. Halfling  
         8. Orcish  
+        9. Custom !!
 
 Age.  !!
+Saving Throws !!
+    Strength
+    Dexterity
+    Constitution
+    Intelligence
+    Wisdom
+    Charisma
