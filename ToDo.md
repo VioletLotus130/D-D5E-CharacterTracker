@@ -6,7 +6,7 @@
 
 ## Sex  DONE
 
-## Race  WIP !! Make preset settings for Attribute bonuses for these races
+## Race  WIP !! Make preset settings for Attribute bonuses and languages for these races
 
     ### Defaults
         1.  Aasimar
@@ -41,7 +41,7 @@
         12. Wizard
         13. Custom !!
 
-## Languages WIP !! Take all languages
+## Languages WIP !! Take all languages && work with race
 
     ### Defaults
         1. Common  
@@ -54,9 +54,9 @@
         8. Orcish  
         9. Custom !!
 
-## Age.  !!
+## Age.  WIP !! Add option to roll for age
 
-## Saving Throws !!
+## Saving Throws !! assign to skills
 
     Strength
     Dexterity
@@ -65,7 +65,7 @@
     Wisdom
     Charisma
 
-## HitDice !!
+## HitDice DONE
 
     * Barbarian 
         * 1d12 Per Level
@@ -116,7 +116,7 @@
         * 1st Level = 6 + ConMod
         * HigherLvls = 1d6 [or flat 4] + ConMod PerLevel after 1st
 
-## Starting Money !!
+## Starting Money DONE
 
     * Barbarian
         * 2d4 x 10 gp
@@ -142,3 +142,25 @@
         * 4d4 x 10 gp
     * Wizard
         * 4D4 x 10 GP
+        
+## Different Die Functions !!
+    * d2  coin-flip
+    * d3
+    * d4
+    * d6
+    * d8
+    * d10
+    * d12
+    * d20
+
+## Experience && Levels !!
+
+## Make int main() a menu and split all parts into functions for ease of navigation WIP !!
+    * New character
+    * Load character
+    * Inventory
+    * Equiped items
+    * Playing game
+## Item IDs and inventory tracking !!
+
+## Currency tracking !!
