@@ -161,7 +161,7 @@
     * Inventory
     * Equiped items
     * Playing game
-### Combat
+### Combat !!
     * Initiative
     * Health
     * Damage
