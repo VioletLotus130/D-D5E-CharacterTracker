@@ -161,6 +161,11 @@
     * Inventory
     * Equiped items
     * Playing game
+# Combat
+    * Initiative
+    * Health
+    * Damage
+    
 ## Item IDs and inventory tracking !!
 
 ## Currency tracking !!
