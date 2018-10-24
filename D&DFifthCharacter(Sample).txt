@@ -1,0 +1,28 @@
+
+  Player Name:     Carlos
+
+Your Character Outline:
+
+            Name: Lotus
+             Sex: Male
+            Race: Half-Elf
+             Age: 36
+       Alignment: Lawful Neutral
+           Class: Fighter
+   Current Level: 1
+          Max HP: 13
+     Class Money: 140
+            Attributes:
+          Strength: 11
+         Dexterity: 14
+      Constitution: 13
+      Intelligence: 12
+            Wisdom: 11
+          Charisma: 6
+        Attribute Modifiers:
+      Strength Modifier: 0
+     Dexterity Modifier: 2
+  Constitution Modifier: 1
+  Intelligence Modifier: 1
+        Wisdom Modifier: 0
+      Charisma Modifier: -2
